@@ -266,6 +266,14 @@
                 this.showDropdowns = options.showDropdowns;
             }
 
+            if (typeof options.yearDecrement === 'number') {
+                this.yearDecrement = options.yearDecrement;
+            }
+
+            if (typeof options.yearIncrement === 'number') {
+                this.yearIncrement = options.yearIncrement;
+            }
+
             if (typeof options.singleDatePicker === 'boolean') {
                 this.singleDatePicker = options.singleDatePicker;
                 if (this.singleDatePicker) {
