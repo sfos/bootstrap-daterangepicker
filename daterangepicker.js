@@ -124,6 +124,8 @@
             this.dateLimit = false;
 
             this.showDropdowns = false;
+            this.yearDecrement = 50;
+            this.yearIncrement = 5;
             this.showWeekNumbers = false;
             this.timePicker = false;
             this.timePickerSeconds = false;
@@ -1076,8 +1078,8 @@
         renderDropdowns: function (selected, minDate, maxDate) {
             var currentMonth = selected.month();
             var currentYear = selected.year();
-            var maxYear = (maxDate && maxDate.year()) || (currentYear + 5);
-            var minYear = (minDate && minDate.year()) || (currentYear - 50);
+            var maxYear = (maxDate && maxDate.year()) || (currentYear + this.yearIncrement);
+            var minYear = (minDate && minDate.year()) || (currentYear - this.yearDecrement);
 
             var monthHtml = '<select class="monthselect">';
             var inMinYear = currentYear == minYear;
